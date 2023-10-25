@@ -16,9 +16,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Проектирование меню:
-        //Надо сделать класс/cтруктуру Меню, в свойствах которого будет несколько категорий (закуски, основное меню, напитки, десерты) содержащие абстрактный продукт. У каждого конкретного продукта будет название и стоимость (Например: Название: кофе латте, Стоимость: 10руб)
-        //Сделаем функцию(надеюсь вы помните чем отличается метод от функции) которая при получении абстрактного продукта выводит его название и стоимость в консоль
 
         class Position {
             var costProduct : Int
@@ -28,7 +25,7 @@ class ViewController: UIViewController {
                 self.costProduct = costProduct
                 self.nameProduct = nameProduct
             }
-            }
+        }
 
         class Menu {
             var snacks  : [Position]
@@ -49,20 +46,15 @@ class ViewController: UIViewController {
                 print ("Цена : \(costProduct)")
             }
         }
-        func chek (Position : String) {
-            if(Position == "coffee with milk") {
-                let coffeeLatte = Coffee(costProduct: 10, nameProduct: "Lattee")
+        
+        func chek (product : Position) {
+            
+            let coffeeLatte = Coffee(costProduct: product.costProduct, nameProduct: product.nameProduct)
                 coffeeLatte.printProduct()
-                return;
-            }
-            if(Position == "black coffee") {
-                    let blackcofee = Coffee(costProduct: 6, nameProduct: "Espresso")
-                    blackcofee.printProduct()
-                    return;
-                }
-            }
-        chek(Position: "coffee with milk")
-
+        }
+        
+        chek(product: Position(costProduct: 10, nameProduct: "Latte"))
+        
         // Do any additional setup after loading the view.
     }
 
