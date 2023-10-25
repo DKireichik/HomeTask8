@@ -49,19 +49,19 @@ class ViewController: UIViewController {
                 print ("Цена : \(costProduct)")
             }
         }
-        func chek (key : String) {
-            if(key == "coffee with milk") {
+        func chek (Position : String) {
+            if(Position == "coffee with milk") {
                 let coffeeLatte = Coffee(costProduct: 10, nameProduct: "Lattee")
                 coffeeLatte.printProduct()
                 return;
             }
-            if(key == "black coffee") {
+            if(Position == "black coffee") {
                     let blackcofee = Coffee(costProduct: 6, nameProduct: "Espresso")
                     blackcofee.printProduct()
                     return;
                 }
             }
-        chek(key: "black coffee")
+        chek(Position: "coffee with milk")
 
         // Do any additional setup after loading the view.
     }
