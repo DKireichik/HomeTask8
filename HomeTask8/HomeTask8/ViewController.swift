@@ -48,13 +48,12 @@ class ViewController: UIViewController {
         }
         
         func chek (product : Position) {
-            
-            let coffeeLatte = Coffee(costProduct: product.costProduct, nameProduct: product.nameProduct)
-                coffeeLatte.printProduct()
+            print ("Цена :",product.costProduct)
+            print ("Название :",product.nameProduct)
         }
         
-        chek(product: Position(costProduct: 10, nameProduct: "Latte"))
-        
+        chek(product: Coffee(costProduct: 10, nameProduct: "Latte"))
+       
         // Do any additional setup after loading the view.
     }
 
