@@ -13,7 +13,6 @@
 		4BC3F5C52AE9391B0099870C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BC3F5C32AE9391B0099870C /* Main.storyboard */; };
 		4BC3F5C72AE9391C0099870C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BC3F5C62AE9391C0099870C /* Assets.xcassets */; };
 		4BC3F5CA2AE9391C0099870C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BC3F5C82AE9391C0099870C /* LaunchScreen.storyboard */; };
-		4BC3F5D42AEF9FCE0099870C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC3F5D32AEF9FCE0099870C /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		4BC3F5C62AE9391C0099870C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BC3F5C92AE9391C0099870C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BC3F5CB2AE9391C0099870C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4BC3F5D32AEF9FCE0099870C /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +60,6 @@
 				4BC3F5BF2AE9391B0099870C /* SceneDelegate.swift */,
 				4BC3F5C12AE9391B0099870C /* ViewController.swift */,
 				4BC3F5C32AE9391B0099870C /* Main.storyboard */,
-				4BC3F5D32AEF9FCE0099870C /* TableViewController.swift */,
 				4BC3F5C62AE9391C0099870C /* Assets.xcassets */,
 				4BC3F5C82AE9391C0099870C /* LaunchScreen.storyboard */,
 				4BC3F5CB2AE9391C0099870C /* Info.plist */,
@@ -143,7 +140,6 @@
 			files = (
 				4BC3F5C22AE9391B0099870C /* ViewController.swift in Sources */,
 				4BC3F5BE2AE9391B0099870C /* AppDelegate.swift in Sources */,
-				4BC3F5D42AEF9FCE0099870C /* TableViewController.swift in Sources */,
 				4BC3F5C02AE9391B0099870C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
