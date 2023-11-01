@@ -55,27 +55,27 @@ class ViewController: UIViewController {
     
     let chips = {
         let chips = UITextField()
-        chips.text = "Чипсы со вкусом сыра"
+        chips.text = "Чипсы со вкусом сыра   25руб"
         return chips
     }()
     let nachos = {
         let nachos = UITextField()
-        nachos.text = "Начос с кетчупом"
+        nachos.text = "Начос с кетчупом   38руб"
         return nachos
     }()
     let pocky = {
         let pocky = UITextField()
-        pocky.text = "Покки с соусом"
+        pocky.text = "Покки с соусом   10руб"
         return pocky
     }()
     let taxis = {
         let taxis = UITextField()
-        taxis.text = "Тахис"
+        taxis.text = "Тахис   12руб"
         return taxis
     }()
     let chitos = {
         let chitos = UITextField()
-        chitos.text = "Читос в ассортименте"
+        chitos.text = "Читос в ассортименте   5руб"
         return chitos
     }()
     
