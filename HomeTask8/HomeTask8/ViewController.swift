@@ -12,6 +12,7 @@ class Restuarant {
     private (set) var count: Int = 0
     private (set) var name: String = ""
     private init () {}
+    var parametr = Menu()
     func setTotalShift (cost: Int) {
         count += cost
     }
@@ -54,7 +55,7 @@ class Menu {
 
 class ViewController: UIViewController {
     let model = Restuarant.shared
-    var parametr = Menu()
+    
     
     let snacks = {
         var snacks = UIButton(type: .system)
@@ -301,26 +302,26 @@ class ViewController: UIViewController {
     @IBAction func getResult(_ sender: UIButton) {
         switch sender {
         case buttonPlusChips :
-            model.setTotalShift(cost: parametr.snacks[0].costProduct)
+            model.setTotalShift(cost: model.parametr.snacks[0].costProduct)
             result.text = "Итого за смену: \(String(model.count)) руб "
-            model.setTotalShiftNameProduct(names: parametr.snacks[0].nameProduct)
+            model.setTotalShiftNameProduct(names: model.parametr.snacks[0].nameProduct)
             
         case buttonPlusNachos :
-            model.setTotalShift(cost: parametr.snacks[1].costProduct)
+            model.setTotalShift(cost: model.parametr.snacks[1].costProduct)
             result.text = "Итого за смену: \(String(model.count)) руб"
-            model.setTotalShiftNameProduct(names: parametr.snacks[1].nameProduct)
+            model.setTotalShiftNameProduct(names: model.parametr.snacks[1].nameProduct)
         case buttonPlusPocky :
-            model.setTotalShift(cost: parametr.snacks[2].costProduct)
-            result.text = "Итого за смену: \(String(model.count)) руб" 
-            model.setTotalShiftNameProduct(names: parametr.snacks[2].nameProduct)
+            model.setTotalShift(cost: model.parametr.snacks[2].costProduct)
+            result.text = "Итого за смену: \(String(model.count)) руб"
+            model.setTotalShiftNameProduct(names: model.parametr.snacks[2].nameProduct)
         case buttonPlusTaxis :
-            model.setTotalShift(cost: parametr.snacks[3].costProduct)
+            model.setTotalShift(cost: model.parametr.snacks[3].costProduct)
             result.text = "Итого за смену: \(String(model.count)) руб"
-            model.setTotalShiftNameProduct(names: parametr.snacks[3].nameProduct)
+            model.setTotalShiftNameProduct(names: model.parametr.snacks[3].nameProduct)
         case buttonPlusChitos :
-            model.setTotalShift(cost: parametr.snacks[4].costProduct)
+            model.setTotalShift(cost: model.parametr.snacks[4].costProduct)
             result.text = "Итого за смену: \(String(model.count)) руб"
-            model.setTotalShiftNameProduct(names: parametr.snacks[4].nameProduct)
+            model.setTotalShiftNameProduct(names: model.parametr.snacks[4].nameProduct)
         default:
             return 
         }
