@@ -14,6 +14,10 @@ class Restuarant {
     func setTotalShift (cost: Int) {
         count += cost
     }
+    private (set) var name: String = ""
+    func setTotalShiftNameProduct (names: String) {
+        name += ("\n  \(names)")
+    }
     func resetCount () {
         count = 0
     }
@@ -33,7 +37,7 @@ class Position {
 }
 
 class Menu {
-    var snacks  : [Position] = [Position(costProduct: 25, nameProduct: "Chips"), Position(costProduct: 38, nameProduct: "Nachos"), Position(costProduct: 10, nameProduct: "Pocky"), Position(costProduct: 12, nameProduct: "Taxis"), Position(costProduct: 5, nameProduct: "Chitos")]
+    var snacks  : [Position] = [Position(costProduct: 25, nameProduct: "Чипсы со вкусом сыра   25руб"), Position(costProduct: 38, nameProduct: "Начос с кетчупом   38руб"), Position(costProduct: 10, nameProduct: "Покки с соусом   10руб"), Position(costProduct: 12, nameProduct: "Тахис   12руб"), Position(costProduct: 5, nameProduct: "Читос в ассортименте   5руб")]
     var mainMenu : Position = Position(costProduct: 48, nameProduct: "Pizza")
     var drinks : Position = Position(costProduct: 15, nameProduct: "Coffee")
     var dessert : Position = Position(costProduct: 20, nameProduct: "Cake")
@@ -248,19 +252,25 @@ class ViewController: UIViewController {
         switch sender {
         case buttonPlusChips :
             model.setTotalShift(cost: parametr.snacks[0].costProduct)
-            result.text = "Итого за смену: \(String(model.count)) руб"
+            result.text = "Итого за смену: \(String(model.count)) руб "
+            model.setTotalShiftNameProduct(names: parametr.snacks[0].nameProduct)
+            
         case buttonPlusNachos :
             model.setTotalShift(cost: parametr.snacks[1].costProduct)
             result.text = "Итого за смену: \(String(model.count)) руб"
+            model.setTotalShiftNameProduct(names: parametr.snacks[1].nameProduct)
         case buttonPlusPocky :
             model.setTotalShift(cost: parametr.snacks[2].costProduct)
             result.text = "Итого за смену: \(String(model.count)) руб" 
+            model.setTotalShiftNameProduct(names: parametr.snacks[2].nameProduct)
         case buttonPlusTaxis :
             model.setTotalShift(cost: parametr.snacks[3].costProduct)
             result.text = "Итого за смену: \(String(model.count)) руб"
+            model.setTotalShiftNameProduct(names: parametr.snacks[3].nameProduct)
         case buttonPlusChitos :
             model.setTotalShift(cost: parametr.snacks[4].costProduct)
             result.text = "Итого за смену: \(String(model.count)) руб"
+            model.setTotalShiftNameProduct(names: parametr.snacks[4].nameProduct)
         default:
             return 
         }
@@ -271,8 +281,8 @@ class ViewController: UIViewController {
         result.text = "Итого за смену: \(String(model.count)) руб"
     }
     @IBAction func finish (_ sender: UIButton) {
-        print (model.count)
-        
+        print (model.name)
+        print ("Итого за смену: \(model.count)")
     }
 
 }
