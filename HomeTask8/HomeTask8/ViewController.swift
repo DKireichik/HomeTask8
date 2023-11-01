@@ -217,67 +217,68 @@ class ViewController: UIViewController {
         
         view.addSubview(buttonStartShift)
         buttonStartShift.backgroundColor = .gray
-        buttonStartShift.tintColor = .black
+        buttonStartShift.tintColor = .white
         buttonStartShift.layer.cornerRadius = 12
-        buttonStartShift.addTarget(self, action: #selector(start), for: .touchUpInside)
         buttonStartShift.translatesAutoresizingMaskIntoConstraints = false
-        buttonStartShift.widthAnchor.constraint(equalToConstant: 160).isActive = true
+        buttonStartShift.widthAnchor.constraint(equalToConstant: 250).isActive = true
         buttonStartShift.heightAnchor.constraint(equalToConstant: 50).isActive = true
         buttonStartShift.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         buttonStartShift.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
+        buttonStartShift.addTarget(self, action: #selector(start), for: .touchUpInside)
+        
         
         view.addSubview(buttonPlusChips)
-        buttonPlusChips.backgroundColor = .gray
+        buttonPlusChips.backgroundColor = .clear
         buttonPlusChips.tintColor = .black
         buttonPlusChips.layer.cornerRadius = 12
         buttonPlusChips.translatesAutoresizingMaskIntoConstraints = false
-        buttonPlusChips.widthAnchor.constraint(equalToConstant: 40).isActive = true
-        buttonPlusChips.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        buttonPlusChips.topAnchor.constraint(equalTo: view.topAnchor, constant: 270).isActive = true
+        buttonPlusChips.widthAnchor.constraint(equalToConstant: 35).isActive = true
+        buttonPlusChips.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        buttonPlusChips.topAnchor.constraint(equalTo: view.topAnchor, constant: 275).isActive = true
         buttonPlusChips.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
         buttonPlusChips.addTarget(self, action: #selector(getResult), for: .touchUpInside)
       
         view.addSubview(buttonPlusNachos)
-        buttonPlusNachos.backgroundColor = .gray
+        buttonPlusNachos.backgroundColor = .clear
         buttonPlusNachos.tintColor = .black
         buttonPlusNachos.layer.cornerRadius = 12
         buttonPlusNachos.translatesAutoresizingMaskIntoConstraints = false
-        buttonPlusNachos.widthAnchor.constraint(equalToConstant: 40).isActive = true
-        buttonPlusNachos.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        buttonPlusNachos.topAnchor.constraint(equalTo: view.topAnchor, constant: 330).isActive = true
+        buttonPlusNachos.widthAnchor.constraint(equalToConstant: 35).isActive = true
+        buttonPlusNachos.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        buttonPlusNachos.topAnchor.constraint(equalTo: view.topAnchor, constant: 335).isActive = true
         buttonPlusNachos.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
         buttonPlusNachos.addTarget(self, action: #selector(getResult), for: .touchUpInside)
         
         view.addSubview(buttonPlusPocky)
-        buttonPlusPocky.backgroundColor = .gray
+        buttonPlusPocky.backgroundColor = .clear
         buttonPlusPocky.tintColor = .black
         buttonPlusPocky.layer.cornerRadius = 12
         buttonPlusPocky.translatesAutoresizingMaskIntoConstraints = false
-        buttonPlusPocky.widthAnchor.constraint(equalToConstant: 40).isActive = true
-        buttonPlusPocky.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        buttonPlusPocky.topAnchor.constraint(equalTo: view.topAnchor, constant: 390).isActive = true
+        buttonPlusPocky.widthAnchor.constraint(equalToConstant: 35).isActive = true
+        buttonPlusPocky.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        buttonPlusPocky.topAnchor.constraint(equalTo: view.topAnchor, constant: 395).isActive = true
         buttonPlusPocky.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
         buttonPlusPocky.addTarget(self, action: #selector(getResult), for: .touchUpInside)
        
         view.addSubview(buttonPlusTaxis)
-        buttonPlusTaxis.backgroundColor = .gray
+        buttonPlusTaxis.backgroundColor = .clear
         buttonPlusTaxis.tintColor = .black
         buttonPlusTaxis.layer.cornerRadius = 12
         buttonPlusTaxis.translatesAutoresizingMaskIntoConstraints = false
-        buttonPlusTaxis.widthAnchor.constraint(equalToConstant: 40).isActive = true
-        buttonPlusTaxis.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        buttonPlusTaxis.topAnchor.constraint(equalTo: view.topAnchor, constant: 450).isActive = true
+        buttonPlusTaxis.widthAnchor.constraint(equalToConstant: 35).isActive = true
+        buttonPlusTaxis.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        buttonPlusTaxis.topAnchor.constraint(equalTo: view.topAnchor, constant: 455).isActive = true
         buttonPlusTaxis.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
         buttonPlusTaxis.addTarget(self, action: #selector(getResult), for: .touchUpInside)
        
         view.addSubview(buttonPlusChitos)
-        buttonPlusChitos.backgroundColor = .gray
+        buttonPlusChitos.backgroundColor = .clear
         buttonPlusChitos.tintColor = .black
         buttonPlusChitos.layer.cornerRadius = 12
         buttonPlusChitos.translatesAutoresizingMaskIntoConstraints = false
-        buttonPlusChitos.widthAnchor.constraint(equalToConstant: 40).isActive = true
-        buttonPlusChitos.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        buttonPlusChitos.topAnchor.constraint(equalTo: view.topAnchor, constant: 510).isActive = true
+        buttonPlusChitos.widthAnchor.constraint(equalToConstant: 35).isActive = true
+        buttonPlusChitos.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        buttonPlusChitos.topAnchor.constraint(equalTo: view.topAnchor, constant: 515).isActive = true
         buttonPlusChitos.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
         buttonPlusChitos.addTarget(self, action: #selector(getResult), for: .touchUpInside)
         
@@ -285,8 +286,9 @@ class ViewController: UIViewController {
         view.addSubview(finishOfShift)
         finishOfShift.backgroundColor = .purple
         finishOfShift.tintColor = .white
+        finishOfShift.layer.cornerRadius = 12
         finishOfShift.translatesAutoresizingMaskIntoConstraints = false
-        finishOfShift.widthAnchor.constraint(equalToConstant: 280).isActive = true
+        finishOfShift.widthAnchor.constraint(equalToConstant: 355).isActive = true
         finishOfShift.heightAnchor.constraint(equalToConstant: 50).isActive = true
         finishOfShift.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         finishOfShift.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50).isActive = true
