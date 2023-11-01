@@ -10,11 +10,12 @@ import UIKit
 class Restuarant {
     static let shared = Restuarant()
     private (set) var count: Int = 0
+    private (set) var name: String = ""
     private init () {}
     func setTotalShift (cost: Int) {
         count += cost
     }
-    private (set) var name: String = ""
+    
     func setTotalShiftNameProduct (names: String) {
         name += ("\n\(names)")
     }
@@ -107,7 +108,7 @@ class ViewController: UIViewController {
     
     let result = {
         let result = UITextField()
-        result.text = "Итого за смену: 0 руб"
+        result.text = ""
         return result
     }()
     let buttonStartShift = {
@@ -330,6 +331,7 @@ class ViewController: UIViewController {
     @IBAction func finish (_ sender: UIButton) {
         print (model.name)
         print ("Итого за смену: \(model.count)")
+        result.text = ""
     }
 
 }
