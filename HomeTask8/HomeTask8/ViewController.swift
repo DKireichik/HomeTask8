@@ -44,15 +44,6 @@ class Menu {
     
 }
 
-
-//func chek (product : Position) {
-//    print ("Цена :",product.costProduct)
-//    print ("Название :",product.nameProduct)
-//    
-//}
-
-
-
 class ViewController: UIViewController {
     let model = Restuarant.shared
     
@@ -155,9 +146,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .black
+        
         view.addSubview(snacks)
         snacks.translatesAutoresizingMaskIntoConstraints = false
-        snacks.tintColor = .black
+        snacks.tintColor = .white
         snacks.titleLabel?.font = UIFont.systemFont(ofSize: 26)
         snacks.topAnchor.constraint(equalTo: view.topAnchor, constant: 180).isActive = true
         snacks.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
@@ -185,41 +178,47 @@ class ViewController: UIViewController {
         
         
         view.addSubview(chips)
+        chips.textColor = .white
         chips.translatesAutoresizingMaskIntoConstraints = false
         chips.topAnchor.constraint(equalTo: view.topAnchor, constant: 280).isActive = true
         chips.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
        
         view.addSubview(nachos)
+        nachos.textColor = .white
         nachos.translatesAutoresizingMaskIntoConstraints = false
         nachos.topAnchor.constraint(equalTo: view.topAnchor, constant: 340).isActive = true
         nachos.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
         
         view.addSubview(pocky)
+        pocky.textColor = .white
         pocky.translatesAutoresizingMaskIntoConstraints = false
         pocky.topAnchor.constraint(equalTo: view.topAnchor, constant: 400).isActive = true
         pocky.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
         
         view.addSubview(taxis)
+        taxis.textColor = .white
         taxis.translatesAutoresizingMaskIntoConstraints = false
         taxis.topAnchor.constraint(equalTo: view.topAnchor, constant: 460).isActive = true
         taxis.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
          
         view.addSubview(chitos)
+        chitos.textColor = .white
         chitos.translatesAutoresizingMaskIntoConstraints = false
         chitos.topAnchor.constraint(equalTo: view.topAnchor, constant: 520).isActive = true
         chitos.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
         
         
         view.addSubview(result)
+        result.textColor = .white
         result.translatesAutoresizingMaskIntoConstraints = false
         result.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -150).isActive = true
         result.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
         
         
         view.addSubview(buttonStartShift)
-        buttonStartShift.backgroundColor = .gray
+        buttonStartShift.layer.borderWidth = 2.0
+        buttonStartShift.layer.borderColor = (UIColor(red: 1, green: 1, blue: 1, alpha: 1.0)).cgColor
         buttonStartShift.tintColor = .white
-        buttonStartShift.layer.cornerRadius = 12
         buttonStartShift.translatesAutoresizingMaskIntoConstraints = false
         buttonStartShift.widthAnchor.constraint(equalToConstant: 250).isActive = true
         buttonStartShift.heightAnchor.constraint(equalToConstant: 50).isActive = true
@@ -229,73 +228,77 @@ class ViewController: UIViewController {
         
         
         view.addSubview(buttonPlusChips)
+        buttonPlusChips.layer.borderWidth = 0.5
+        buttonPlusChips.layer.borderColor = (UIColor(red: 1, green: 1, blue: 1, alpha: 1.0)).cgColor
         buttonPlusChips.backgroundColor = .clear
-        buttonPlusChips.tintColor = .black
-        buttonPlusChips.layer.cornerRadius = 12
+        buttonPlusChips.tintColor = .white
         buttonPlusChips.translatesAutoresizingMaskIntoConstraints = false
         buttonPlusChips.widthAnchor.constraint(equalToConstant: 35).isActive = true
         buttonPlusChips.heightAnchor.constraint(equalToConstant: 35).isActive = true
-        buttonPlusChips.topAnchor.constraint(equalTo: view.topAnchor, constant: 275).isActive = true
+        buttonPlusChips.centerYAnchor.constraint(equalTo: chips.centerYAnchor).isActive = true
         buttonPlusChips.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
         buttonPlusChips.addTarget(self, action: #selector(getResult), for: .touchUpInside)
       
         view.addSubview(buttonPlusNachos)
         buttonPlusNachos.backgroundColor = .clear
-        buttonPlusNachos.tintColor = .black
-        buttonPlusNachos.layer.cornerRadius = 12
+        buttonPlusNachos.tintColor = .white
+        buttonPlusNachos.layer.borderWidth = 0.5
+        buttonPlusNachos.layer.borderColor = (UIColor(red: 1, green: 1, blue: 1, alpha: 1.0)).cgColor
         buttonPlusNachos.translatesAutoresizingMaskIntoConstraints = false
         buttonPlusNachos.widthAnchor.constraint(equalToConstant: 35).isActive = true
         buttonPlusNachos.heightAnchor.constraint(equalToConstant: 35).isActive = true
-        buttonPlusNachos.topAnchor.constraint(equalTo: view.topAnchor, constant: 335).isActive = true
+        buttonPlusNachos.centerYAnchor.constraint(equalTo: nachos.centerYAnchor).isActive = true
         buttonPlusNachos.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
         buttonPlusNachos.addTarget(self, action: #selector(getResult), for: .touchUpInside)
         
         view.addSubview(buttonPlusPocky)
         buttonPlusPocky.backgroundColor = .clear
-        buttonPlusPocky.tintColor = .black
-        buttonPlusPocky.layer.cornerRadius = 12
+        buttonPlusPocky.tintColor = .white
+        buttonPlusPocky.layer.borderWidth = 0.5
+        buttonPlusPocky.layer.borderColor = (UIColor(red: 1, green: 1, blue: 1, alpha: 1.0)).cgColor
         buttonPlusPocky.translatesAutoresizingMaskIntoConstraints = false
         buttonPlusPocky.widthAnchor.constraint(equalToConstant: 35).isActive = true
         buttonPlusPocky.heightAnchor.constraint(equalToConstant: 35).isActive = true
-        buttonPlusPocky.topAnchor.constraint(equalTo: view.topAnchor, constant: 395).isActive = true
+        buttonPlusPocky.centerYAnchor.constraint(equalTo: pocky.centerYAnchor).isActive = true
         buttonPlusPocky.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
         buttonPlusPocky.addTarget(self, action: #selector(getResult), for: .touchUpInside)
        
         view.addSubview(buttonPlusTaxis)
         buttonPlusTaxis.backgroundColor = .clear
-        buttonPlusTaxis.tintColor = .black
-        buttonPlusTaxis.layer.cornerRadius = 12
+        buttonPlusTaxis.tintColor = .white
+        buttonPlusTaxis.layer.borderWidth = 0.5
+        buttonPlusTaxis.layer.borderColor = (UIColor(red: 1, green: 1, blue: 1, alpha: 1.0)).cgColor
         buttonPlusTaxis.translatesAutoresizingMaskIntoConstraints = false
         buttonPlusTaxis.widthAnchor.constraint(equalToConstant: 35).isActive = true
         buttonPlusTaxis.heightAnchor.constraint(equalToConstant: 35).isActive = true
-        buttonPlusTaxis.topAnchor.constraint(equalTo: view.topAnchor, constant: 455).isActive = true
+        buttonPlusTaxis.centerYAnchor.constraint(equalTo: taxis.centerYAnchor).isActive = true
         buttonPlusTaxis.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
         buttonPlusTaxis.addTarget(self, action: #selector(getResult), for: .touchUpInside)
        
         view.addSubview(buttonPlusChitos)
         buttonPlusChitos.backgroundColor = .clear
-        buttonPlusChitos.tintColor = .black
-        buttonPlusChitos.layer.cornerRadius = 12
+        buttonPlusChitos.tintColor = .white
+        buttonPlusChitos.layer.borderWidth = 0.5
+        buttonPlusChitos.layer.borderColor = (UIColor(red: 1, green: 1, blue: 1, alpha: 1.0)).cgColor
         buttonPlusChitos.translatesAutoresizingMaskIntoConstraints = false
         buttonPlusChitos.widthAnchor.constraint(equalToConstant: 35).isActive = true
         buttonPlusChitos.heightAnchor.constraint(equalToConstant: 35).isActive = true
-        buttonPlusChitos.topAnchor.constraint(equalTo: view.topAnchor, constant: 515).isActive = true
+        buttonPlusChitos.centerYAnchor.constraint(equalTo: chitos.centerYAnchor).isActive = true
         buttonPlusChitos.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
         buttonPlusChitos.addTarget(self, action: #selector(getResult), for: .touchUpInside)
         
         
         view.addSubview(finishOfShift)
-        finishOfShift.backgroundColor = .purple
+        finishOfShift.isHidden = true
+        finishOfShift.layer.borderWidth = 2.0
+        finishOfShift.layer.borderColor = (UIColor(red: 1, green: 1, blue: 1, alpha: 1.0)).cgColor
         finishOfShift.tintColor = .white
-        finishOfShift.layer.cornerRadius = 12
         finishOfShift.translatesAutoresizingMaskIntoConstraints = false
         finishOfShift.widthAnchor.constraint(equalToConstant: 355).isActive = true
         finishOfShift.heightAnchor.constraint(equalToConstant: 50).isActive = true
         finishOfShift.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         finishOfShift.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50).isActive = true
         finishOfShift.addTarget(self, action: #selector(finish), for: .touchUpInside)
-
-//        chek(product: Coffee(costProduct: 10, nameProduct: "Latte"))
         
     }
     
@@ -305,7 +308,6 @@ class ViewController: UIViewController {
             model.setTotalShift(cost: model.parametr.snacks[0].costProduct)
             result.text = "Итого за смену: \(String(model.count)) руб "
             model.setTotalShiftNameProduct(names: model.parametr.snacks[0].nameProduct)
-            
         case buttonPlusNachos :
             model.setTotalShift(cost: model.parametr.snacks[1].costProduct)
             result.text = "Итого за смену: \(String(model.count)) руб"
@@ -330,12 +332,16 @@ class ViewController: UIViewController {
     @IBAction func start (_ sender: UIButton) {
         model.resetCount()
         result.text = "Итого за смену: \(String(model.count)) руб"
+        buttonStartShift.isHidden = true
+        finishOfShift.isHidden = false
     }
+    
     @IBAction func finish (_ sender: UIButton) {
         print (model.name)
         print ("Итого за смену: \(model.count)")
         result.text = ""
+        buttonStartShift.isHidden = false
+        finishOfShift.isHidden = true
     }
-
 }
 
